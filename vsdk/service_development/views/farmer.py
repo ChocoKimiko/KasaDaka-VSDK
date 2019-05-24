@@ -17,7 +17,7 @@ class FarmerRegistration(TemplateView):
             return base.redirect_add_get_parameters('service-development:language-selection', session.id,
                     redirect_url=redirect_url)
 
-        communes = Commune.objects.all()
+        communes = ["a", "b"]
         villages = Village.objects.all()
 
         print(communes)

@@ -5,10 +5,10 @@
 		<prompt>
             <!--Commune Selection-->
             {% for commune in communes %}
-			    <audio src="{{ commune.get_interface_voice_label_url_dict.pre_choice_option }}"/>
-                <audio src="{{ commune.get_interface_voice_label_url_dict.voice_label }}"/>
-                <audio src="{{ commune.get_interface_voice_label_url_dict.post_choice_option }}"/>
-			    {% for number in commune.get_interface_numbers_voice_label_url_list %}{% if forloop.counter0 == forloop.parentloop.counter %}<audio src="{{ number }}"/>{% endif %}{% endfor %}
+			    <audio src="{{ language.get_interface_voice_label_url_dict.pre_choice_option }}"/>
+                <audio src="{{ language.get_interface_voice_label_url_dict.voice_label }}"/>
+                <audio src="{{ language.get_interface_voice_label_url_dict.post_choice_option }}"/>
+			    {% for number in language.get_interface_numbers_voice_label_url_list %}{% if forloop.counter0 == forloop.parentloop.counter %}<audio src="{{ number }}"/>{% endif %}{% endfor %}
 			{% endfor %}
 		</prompt>
 
