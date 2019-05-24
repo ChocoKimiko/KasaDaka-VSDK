@@ -195,6 +195,13 @@ class AdvertisementAdmin(admin.ModelAdmin):
 class SeedAdmin(admin.ModelAdmin):
     list_display = ['name']
 
+class CommuneAdmin(admin.ModelAdmin):
+    list_display = ['name']
+
+
+class VillageAdmin(admin.ModelAdmin):
+    list_display = ['name']
+
 # Register your models here.
 
 admin.site.register(VoiceService, VoiceServiceAdmin)
@@ -209,3 +216,5 @@ admin.site.register(FarmerInputCategory)
 admin.site.register(Record)
 admin.site.register(Advertisement, AdvertisementAdmin)
 admin.site.register(Seed, SeedAdmin)
+admin.site.register(Commune, CommuneAdmin)
+admin.site.register(Village, VillageAdmin)
