@@ -11,7 +11,7 @@ class FarmerRegistration(TemplateView):
 
     def render_farmer_registration_form(self, request, session):
         # This is the redirect URL to POST the language selected
-        redirect_url = reverse('service-development:farmer-registration', args=[session.id])
+        redirect_url = redirect('service-development:voice-service', voice_service_id = session.service.id, session_id = session.id)
 
         if session.service.registration_language and session.language is None:
             return base.redirect_add_get_parameters('service-development:language-selection', session.id,
