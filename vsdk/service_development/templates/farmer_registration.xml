@@ -1,6 +1,6 @@
 {% extends "base.xml" %}
 {% block content%}
-<form id="farmer_registration_form">
+<form id="commune_registration">
 	<field name="commune_field">
 		<prompt>
             <!--Commune Selection-->
@@ -35,9 +35,12 @@
             {% endfor %}
             <else/>
             </if>
+            <goto next="#village_registration"/>
         </filled>
     </field>
+</form>
 
+<form id="village_registration">
     <field name="village_field">
 		<prompt>
             <!--Village Selection-->
@@ -73,11 +76,8 @@
             <else/>
             </if>
         </filled>
-    </field>
-
-    <block>
         <goto next="#submit_form"/>
-    </block>
+    </field>
 </form>
 
 
