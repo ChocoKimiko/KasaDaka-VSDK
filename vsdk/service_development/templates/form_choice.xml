@@ -30,10 +30,10 @@
             <filled>
                 {% for option in choice_options %}
                     {% if forloop.counter == 1 %}
-                        <if cond="option_field == '{{ forloop.counter }}'">
+                        <if cond="choice == '{{ forloop.counter }}'">
                         <assign name="option_id" expr="'{{ option.id }}'"/>
                     {% else %}
-                        <elseif cond="option_field == '{{ forloop.counter }}'" />
+                        <elseif cond="choice == '{{ forloop.counter }}'" />
                         <assign name="option_id" expr="'{{ option.id }}'"/>
                     {% endif %}
                 {% endfor %}
