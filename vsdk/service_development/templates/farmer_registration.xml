@@ -81,9 +81,7 @@
         </filled>
     </field>
 
-    <block>
-        <goto next="#submit_form"/>
-    </block>
+    <goto next="#submit_form"/>
 </form>
 
 

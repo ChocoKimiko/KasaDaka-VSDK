@@ -52,6 +52,8 @@
 </form>
 
 <form id="submit_form">
-    <submit next="{{ redirect_url }}" method="post" namelist="redirect_url"/>
+    <block>
+        <submit next="{{ redirect_url }}" method="post" namelist="redirect_url"/>
+    </block>
 </form>
 {% endblock %}
