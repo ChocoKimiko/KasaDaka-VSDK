@@ -1,7 +1,7 @@
 {% extends "base.xml" %}
 {% block content%}
 <form id="replay_actions">
-	<field name="replay_actions_field">
+	<block>
 		<prompt>
             <!--Created-->
             {% if replay_action_create %}
@@ -47,8 +47,10 @@
             <audio src="{{ made_no_new_changes_to_your_advertisements }}"/>
             {% endif %}
 		</prompt>
-        <goto next="{{ redirect_url }}"/>
-    </field>
+        {% if redirect_url %}
+            <goto next="{{ redirect_url }}"/>
+        {% endif %}
+    </block>
 </form>
 
 {% endblock %}
